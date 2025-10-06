@@ -2,10 +2,6 @@
 
 A simple, powerful, and user-friendly web application that converts JSON data into Excel spreadsheet format. No server required - everything runs directly in your browser!
 
-![Excel Icon](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
 ## ✨ Features
 
 - **🚀 100% Client-Side**: No server uploads, all processing happens in your browser
@@ -43,6 +39,7 @@ A simple, powerful, and user-friendly web application that converts JSON data in
 ## 📋 JSON Format Examples
 
 ### Standard JSON Format
+
 ```json
 [
   {
@@ -61,24 +58,26 @@ A simple, powerful, and user-friendly web application that converts JSON data in
 ```
 
 ### JavaScript Object Notation (Also Supported!)
+
 ```javascript
 [
   {
     id: 1,
-    name: 'John Doe',
-    email: 'john@example.com',
-    age: 30
+    name: "John Doe",
+    email: "john@example.com",
+    age: 30,
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    email: 'jane@example.com',
-    age: 25
-  }
-]
+    name: "Jane Smith",
+    email: "jane@example.com",
+    age: 25,
+  },
+];
 ```
 
 ### Date Values (Automatically Handled!)
+
 ```javascript
 [
   {
@@ -94,7 +93,9 @@ A simple, powerful, and user-friendly web application that converts JSON data in
 ## 🛠️ Smart Features
 
 ### Auto-Correction
+
 The converter automatically handles:
+
 - ✅ Unquoted property names → Adds quotes
 - ✅ Single quotes → Converts to double quotes
 - ✅ Unquoted date values → Wraps in quotes
@@ -102,7 +103,9 @@ The converter automatically handles:
 - ✅ Extra whitespace → Trims it
 
 ### Error Handling
+
 When errors occur, you'll see:
+
 - 🔍 Exact error message
 - 🆔 Last detected ID before error
 - 🔢 Approximate object number
@@ -111,12 +114,14 @@ When errors occur, you'll see:
 ## 🎨 Technical Details
 
 ### Built With
+
 - **HTML5** - Structure
 - **CSS3** - Excel-inspired styling with grid overlay
 - **Vanilla JavaScript** - Logic and data processing
 - **SheetJS (xlsx)** - Excel file generation
 
 ### Browser Compatibility
+
 - ✅ Chrome 90+
 - ✅ Firefox 88+
 - ✅ Safari 14+
@@ -125,6 +130,7 @@ When errors occur, you'll see:
 ## 📊 Output Format
 
 The generated Excel file includes:
+
 - **Column headers** extracted from JSON object keys
 - **Data rows** for each object in the array
 - **Proper data types** (numbers, strings, dates)
@@ -141,15 +147,19 @@ The generated Excel file includes:
 ## ⚠️ Common Issues & Solutions
 
 ### Issue: "Expected property name or '}'"
+
 **Solution**: Make sure your JSON starts with `[` and ends with `]`. Property names need quotes in standard JSON.
 
 ### Issue: "Unexpected non-whitespace character"
+
 **Solution**: Remove any trailing semicolons (`;`) after the closing `]` or check for missing commas between objects.
 
 ### Issue: "JSON data must be an array of objects"
+
 **Solution**: Ensure your data is wrapped in square brackets `[...]` and contains objects `{...}`.
 
 ### Issue: Can't find downloaded file
+
 **Solution**: Check your browser's Downloads folder. The file is named according to your "Excel File Title" input.
 
 ## 💡 Tips
